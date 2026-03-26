@@ -1,11 +1,16 @@
 from other import Player
+import platform
+import os
+import time
 
 def main():
     name = ""
     while name == "":
         name = input("Player, please enter your name: ")
+        clear_screen()
 
     player = Player(name)
+    clear_screen()
 
     while True:
         print("Will You:")
@@ -31,7 +36,17 @@ def main():
             case "6":
                 player.heal()
             case _:
+                clear_screen()
                 continue
+
+        time.sleep(1.5)
+        clear_screen()
+
+def clear_screen():
+    if platform.system() == "Windows":
+        os.system("cls")
+    else:
+        os.system("clear")
 
 
 if __name__ == "__main__":
