@@ -17,7 +17,7 @@ class Player():
     def move_right(self):
         print(f"{self.name} moves 1 step right")
 
-    def attack(self):
+    def attacking(self):
         print(f"{self.name} swings their weapon dealing {self.attack} damage!")
 
     def take_damage(self):
